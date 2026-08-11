@@ -126,7 +126,9 @@ export default function App() {
           <div className="bg-indigo-600 p-2 rounded-lg">
             <FileText className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-xl font-bold tracking-wide">PDF Engine Studio</h1>
+          <h1 className="text-xl font-bold tracking-wide">
+            PDF Toolkit Studio
+          </h1>
         </div>
       </header>
 
