@@ -4,6 +4,12 @@ Un motor local tipo SaaS para procesamiento y manipulación masiva de archivos
 PDF, construido con **Deno**, **Hono**, **LibreOffice**, **QPDF** y un frontend
 moderno en **React + Tailwind CSS**.
 
+## 📸 Vista Previa
+
+![PDF Toolkit Studio Dashboard](.github/assets/dashboard.png)
+
+---
+
 ## 🚀 Características
 
 - **Conversión de Word a PDF:** Conversión individual o por lotes de archivos
