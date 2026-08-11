@@ -1,0 +1,44 @@
+# --- Deno ---
+# Caché local de dependencias y módulos remotos
+.deno_plugins/
+bin/
+
+# npm con Deno (opcional)
+node_modules/
+npm-debug.log*
+
+# Archivos de cobertura de código generados por 'deno test --coverage'
+coverage/
+
+# --- Visual Studio Code ---
+# Historial e información local del editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- TypeScript & Compilación ---
+dist/
+out/
+*.tsbuildinfo
+
+# --- Variables de Entorno y claves ---
+.env
+.env.local
+.env.*.local
+venv/
+.venv/
+
+# --- Archivos del Sistema Operativo ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
