@@ -67,18 +67,31 @@ moderno en **React + Tailwind CSS**.
 
 Asegúrate de tener instaladas las siguientes herramientas en tu sistema:
 
-1. **Deno** (v1.40+)
-2. **Node.js** (v18+)
+1. **Deno** (v1.40+) [Descarga Deno](https://deno.com/)
+2. **Node.js** (v18+) [Descarga Node.js](https://nodejs.org/en/download)
 3. **LibreOffice** (Asegurado en el PATH del sistema)
+   [Descarga LibreOffice](https://www.libreoffice.org/download/)
 4. **QPDF** (Asegurado en el PATH del sistema)
+   [Descarga QPDF](https://sourceforge.net/projects/qpdf/)
 
 ---
 
 ## ⚙️ Instalación y Ejecución
 
-### 1. Backend (API Engine)
+### I Modo desarrollo (Dev Mode)
 
-Abre una terminal en la raíz del proyecto: Ejecutar en modo desarrollo
+#### 1. Clona el repositorio (Clone the repository)
+
+Abre una terminal, clona el repositorio e ingresa a la carpeta
+
+```bash
+git clone https://github.com/gmrcodes/pdf-toolkit-api.git
+cd pdf-toolkit-api
+```
+
+#### 2. Backend (API Engine)
+
+Ejecuta Deno server en modo desarrollo
 
 ```bash
 deno task dev
@@ -86,9 +99,9 @@ deno task dev
 
 La API estará escuchando en http://localhost:8000
 
-### 2. Frontend (Dashboard Web)
+#### 3. Frontend (Dashboard Web)
 
-En otra terminal, entra a la carpeta client:
+En otra terminal, entra a la carpeta client y ejecuta el server:
 
 ```bash
 cd client
@@ -97,6 +110,34 @@ npm run dev
 ```
 
 La aplicación web estará disponible en http://localhost:5173
+
+### II Modo Usuario (User Mode)
+
+#### Uso Local (Local use)
+
+- Descarga la versión binaria ejecutable.
+- Ejecuta PDF-Toolkit o PDF-Toolkit.exe
+- Abre el navegador web e ingresa a http://localhost:8000
+
+#### Uso en LAN (LAN use)
+
+- Abre una terminal en el equipo servidor y busca la ip
+
+#### En Windows:
+
+```bash
+ipconfig
+```
+
+#### En Linux/MacOS
+
+```bash
+hostname -I
+```
+
+- Ejecuta PDF-Toolkit o PDF-Toolkit.exe
+- Abre el navegador web en el PC o movil en la misma red WiFi/LAN e ingresa a
+  http://ip-del-servidor:8000 (ej. http://192.168.0.10:8000)
 
 ---
 
