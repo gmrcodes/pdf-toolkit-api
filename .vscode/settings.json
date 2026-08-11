@@ -1,5 +1,9 @@
 {
   "deno.enable": true,
+  "deno.enablePaths": [
+    "src",
+    "deno.json"
+  ],
   "deno.lint": true,
   "deno.unstable": [],
   "editor.defaultFormatter": "denoland.vscode-deno"

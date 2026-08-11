@@ -2,6 +2,9 @@
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-write --allow-run --watch src/main.ts"
   },
+  "exclude": [
+    "client/"
+  ],
   "imports": {
     "hono": "jsr:@hono/hono@^4.0.0",
     "pdf-lib": "npm:pdf-lib@^1.17.1",
