@@ -74,9 +74,8 @@ export default function App() {
       if (activeTab === "convert") {
         endpoint = "/api/v1/convert/word-to-pdf";
         Array.from(files).forEach((file) => formData.append("files", file));
-        defaultFileName = files.length > 1
-          ? "documentos_convertidos.zip"
-          : "convertido.pdf";
+        defaultFileName =
+          files.length > 1 ? "documentos_convertidos.zip" : "convertido.pdf";
       } else if (activeTab === "merge") {
         endpoint = "/api/v1/pdf/merge";
         Array.from(files).forEach((file) => formData.append("files", file));
@@ -109,9 +108,8 @@ export default function App() {
       const blob = await response.blob();
       handleDownload(blob, defaultFileName, response);
     } catch (err) {
-      const msg = err instanceof Error
-        ? err.message
-        : "Error al procesar la solicitud";
+      const msg =
+        err instanceof Error ? err.message : "Error al procesar la solicitud";
       setError(msg);
     } finally {
       setLoading(false);
@@ -246,7 +244,8 @@ export default function App() {
                     min={1}
                     value={startPage}
                     onChange={(e) =>
-                      setStartPage(parseInt(e.target.value, 10) || 1)}
+                      setStartPage(parseInt(e.target.value, 10) || 1)
+                    }
                     className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-indigo-500"
                   />
                 </div>
@@ -259,7 +258,8 @@ export default function App() {
                     min={1}
                     value={endPage}
                     onChange={(e) =>
-                      setEndPage(parseInt(e.target.value, 10) || 1)}
+                      setEndPage(parseInt(e.target.value, 10) || 1)
+                    }
                     className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-indigo-500"
                   />
                 </div>
@@ -295,19 +295,52 @@ export default function App() {
               disabled={loading}
               className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-indigo-600/20"
             >
-              {loading
-                ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" /> Procesando...
-                  </>
-                )
-                : (
-                  "Ejecutar Operación"
-                )}
+              {loading ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" /> Procesando...
+                </>
+              ) : (
+                "Ejecutar Operación"
+              )}
             </button>
           </form>
         </div>
       </main>
+
+      {/* Créditos y Licencia */}
+      <footer className="border-t border-slate-800/80 bg-slate-950/60 py-6 px-4 text-center text-xs text-slate-400">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p>
+            Construido con{" "}
+            <span className="text-slate-200 font-medium">Deno</span>,{" "}
+            <span className="text-slate-200 font-medium">Hono</span>,{" "}
+            <span className="text-slate-200 font-medium">React</span> &{" "}
+            <span className="text-slate-200 font-medium">Tailwind CSS</span>.
+          </p>
+          <p>
+            Licencia libre bajo{" "}
+            <a
+              href="https://www.gnu.org/licenses/gpl-3.0.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 underline font-medium transition"
+            >
+              GNU GPLv3
+            </a>
+          </p>
+        </div>
+        <p className="text-slate-500 pt-2 border-t border-slate-800/50">
+          Desarrollado por{" "}
+          <a
+            href="https://github.com/gmrcodes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-200 hover:text-indigo-400 font-medium transition underline"
+          >
+            gmrCodes
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
