@@ -67,12 +67,25 @@ moderno en **React + Tailwind CSS**.
 
 Asegúrate de tener instaladas las siguientes herramientas en tu sistema:
 
-1. **Deno** (v1.40+) [Descarga Deno](https://deno.com/)
+1. **Deno** (v1.40+)
+   [Descarga Deno](https://docs.deno.com/runtime/getting_started/installation/)
 2. **Node.js** (v18+) [Descarga Node.js](https://nodejs.org/en/download)
 3. **LibreOffice** (Asegurado en el PATH del sistema)
    [Descarga LibreOffice](https://www.libreoffice.org/download/)
 4. **QPDF** (Asegurado en el PATH del sistema)
-   [Descarga QPDF](https://sourceforge.net/projects/qpdf/)
+   [Descarga QPDF windows](https://sourceforge.net/projects/qpdf/)
+   #### Ubuntu / Debian / Linux Mint / Pop!_OS:
+   ```bash
+   sudo apt install qpdf
+   ```
+   #### Fedora / RHEL / CentOS:
+   ```bash
+   sudo dnf install qpdf
+   ```
+   #### Arch Linux / Manjaro:
+   ```bash
+   sudo pacman -S qpdf
+   ```
 
 ---
 
@@ -138,9 +151,9 @@ ipconfig
 hostname -I
 ```
 
-- Ejecuta PDF-Toolkit o PDF-Toolkit.exe
-- Abre el navegador web en el PC o movil en la misma red WiFi/LAN e ingresa a
-  http://ip-del-servidor:8000 (ej. http://192.168.0.10:8000)
+- Ejecuta PDF-Toolkit o PDF-Toolkit.exe en el PC Servidor
+- Abre el navegador web en el PC Cliente o movil en la misma red WiFi/LAN e
+  ingresa a http://ip-del-servidor:8000 (ej. http://192.168.0.10:8000)
 
 ---
 
