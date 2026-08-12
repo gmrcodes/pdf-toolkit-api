@@ -115,7 +115,10 @@ La aplicación web estará disponible en http://localhost:5173
 
 #### Uso Local (Local use)
 
-- Descarga la versión binaria ejecutable.
+- Descarga la versión pre-compilada del ejecutable para tu Sistema.
+  [Descargar](https://github.com/gmrcodes/pdf-toolkit-api/releases/tag/v1.0.0)
+- Descomprime dentro de la carpeta "/pdf-toolkit-api" clonada en el paso
+  anterior
 - Ejecuta PDF-Toolkit o PDF-Toolkit.exe
 - Abre el navegador web e ingresa a http://localhost:8000
 
